@@ -78,7 +78,7 @@ tidy.set <- melt(lim.set, id=c("Subject", "Activity"))
 tidy.set <- dcast(tidy.set, Subject + Activity ~ variable, mean)
 
 # Export the tidy dataset to a text file
-write.table(tidy.set, "tidyset.txt")
+write.table(tidy.set, "tidyset.txt", row.name=FALSE)
 
 ## The End!
 
